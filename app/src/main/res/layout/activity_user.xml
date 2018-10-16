@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="ch.epfl.sweng.partyup.HostActivity">
+
+
+    <LinearLayout
+
+        android:id="@+id/host_activity_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/backgroundLight"
+        android:orientation="vertical">
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="8dp"
+            android:background="@color/backgroundLight" />
+
+        <LinearLayout
+            android:id="@+id/header_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:background="@color/backgroundLight"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/partyName"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight=".65"
+                android:maxLines="1"
+                android:background="@color/backgroundLight"
+                android:elevation="1dp"
+                android:gravity="center"
+                android:text="@string/party_name"
+                android:textColor="?attr/colorPrimary"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <ImageButton
+                android:id="@+id/cameraButton"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight=".13"
+                android:background="@color/backgroundLight"
+                android:contentDescription="@string/imageButton"
+                android:onClick="onCameraButtonClick"
+                app:srcCompat="@drawable/ic_photo_camera_gray_24dp" />
+
+            <ImageButton
+                android:id="@+id/searchButton"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight=".13"
+                android:background="@color/backgroundLight"
+                android:contentDescription="@string/imageButton"
+                android:onClick="onSearchButtonClick"
+                app:srcCompat="@drawable/ic_search_gray_24dp" />
+
+            <ImageButton
+                android:id="@+id/settingButton"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight=".09"
+                android:background="@color/backgroundLight"
+                android:contentDescription="@string/imageButton"
+                android:onClick="showPopup"
+                app:srcCompat="@drawable/ic_more_vert_gray_24dp" />
+
+
+        </LinearLayout>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="8dp"
+            android:background="@color/backgroundLight" />
+
+        <FrameLayout
+            android:id="@+id/content"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@color/background">
+
+        </FrameLayout>
+
+        <fragment
+            android:id="@+id/playerFragment"
+            android:name="ch.epfl.sweng.partyup.PlayerFragment"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            tools:layout="@layout/fragment_player" />
+
+        <android.support.design.widget.BottomNavigationView
+            android:id="@+id/bottom_navigation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:visibility="visible"
+            app:itemTextColor="@color/textColorMain"
+            app:menu="@menu/bottom_navigation" />
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/loadingBar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/backgroundSeethrough">
+
+        <ProgressBar
+            android:id="@+id/loading"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true" />
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

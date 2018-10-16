@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="cam_view_dim">280dp</dimen>
+    <dimen name="layout_mag_dim">10dp</dimen>
+</resources>

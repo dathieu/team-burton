@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "157158426323",
+    "firebase_url": "https://partyup-b194f.firebaseio.com",
+    "project_id": "partyup-b194f",
+    "storage_bucket": "partyup-b194f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:157158426323:android:4174fb0f709fa3d8",
+        "android_client_info": {
+          "package_name": "ch.epfl.sweng.partyup"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "157158426323-dcio4tvig9tjovbvt9efoq0f19mguf6m.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "ch.epfl.sweng.partyup",
+            "certificate_hash": "ea4cf9b20b624879d76ef4810e7b255aa5a700c8"
+          }
+        },
+        {
+          "client_id": "157158426323-8bvgp93f52roiecu5lg7a3b9mdvlobef.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCtLLsry1gR559CetgLwBHa9_5vIdsoR2w"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "157158426323-8bvgp93f52roiecu5lg7a3b9mdvlobef.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

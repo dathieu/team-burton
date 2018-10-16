@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_playlist"
+        android:icon="@drawable/ic_playlist_24dp"
+        android:title="@string/title_playlist" />
+    <item
+        android:id="@+id/navigation_qrcode"
+        android:icon="@drawable/ic_qrcode_24dp"
+        android:title="@string/title_qrcode" />
+
+</menu>

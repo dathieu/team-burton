@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<lint>
+
+    <!-- generated compile time ressource not touchable -->
+    <issue id="UnusedResources">
+        <ignore regexp="google_crash_reporting_api_key" />
+    </issue>
+    <issue id="UnusedResources">
+        <ignore regexp="project_id" />
+    </issue>
+
+    <!-- Disable the app indexing with link in this project -->
+    <issue id="GoogleAppIndexingWarning" severity="ignore" />
+
+    <!-- seen and want null -->
+    <issue id="InflateParams" severity="ignore" />
+
+</lint>

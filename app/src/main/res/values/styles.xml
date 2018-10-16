@@ -1,0 +1,33 @@
+<resources>
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">#008d36</item>
+        <item name="colorPrimaryDark">#006633</item>
+        <item name="colorAccent">#008d36</item>
+
+        <item name="android:textColorHint">@android:color/darker_gray</item>
+        <item name="android:windowBackground">@null</item>
+    </style>
+
+    <style name="Widget.Button.Upvote" parent="android:Widget">
+        <item name="android:background">@drawable/downvote_toggle</item>
+        <item name="android:disabledAlpha">?android:attr/disabledAlpha</item>
+    </style>
+
+    <style name="upvote_button"  parent="@android:style/Theme.Black">
+        <item name="android:buttonStyleToggle">@style/Widget.Button.Upvote</item>
+        <item name="android:textOn"></item>
+        <item name="android:textOff"></item>
+    </style>
+    <style name="Widget.Button.Downvote" parent="android:Widget">
+        <item name="android:background">@drawable/downvote_toggle</item>
+        <item name="android:disabledAlpha">?android:attr/disabledAlpha</item>
+    </style>
+
+    <style name="downvote_button"  parent="@android:style/Theme.Black">
+        <item name="android:buttonStyleToggle">@style/Widget.Button.Downvote</item>
+        <item name="android:textOn"></item>
+        <item name="android:textOff"></item>
+    </style>
+</resources>

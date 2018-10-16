@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/memory_navigation_songslist"
+        android:icon="@drawable/ic_playlist_24dp"
+        android:title="@string/memory_navigation_songs" />
+    <item
+        android:id="@+id/memory_navigation_photos"
+        android:icon="@drawable/ic_qrcode_24dp"
+        android:title="@string/memory_navigation_photos" />
+</menu>

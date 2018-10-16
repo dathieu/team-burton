@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            android:orientation="vertical"
+            android:background="@color/background"
+            tools:layout_editor_absoluteY="8dp"
+            tools:layout_editor_absoluteX="8dp"
+            tools:context="ch.epfl.sweng.partyup.WelcomeScreen">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight=".6"
+
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/Title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="@string/WelcomeScreenTitle"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="@android:dimen/app_icon_size"
+                    android:textStyle="bold|italic"
+                    tools:text="@string/WelcomeScreenTitle" />
+            </LinearLayout>
+
+            <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.9"
+            tools:ignore="NestedWeights"><!--needed for a proper layout-->
+
+            <Button
+                android:id="@+id/HostButton"
+                android:layout_width="0dp"
+
+                android:layout_height="0dp"
+
+
+                android:background="@mipmap/bannerwelcomescreen"
+                android:elevation="9dp"
+                android:onClick="StartHostActivity"
+                android:paddingEnd="65dp"
+                android:paddingStart="0dp"
+                android:text="@string/host"
+                android:textAlignment="textEnd"
+
+                android:textAllCaps="false"
+                android:textColor="@color/textColorMain"
+                android:textSize="28sp"
+                android:textStyle="bold"
+                android:theme="@style/mainTheme"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintDimensionRatio="H,6:1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+            </android.support.constraint.ConstraintLayout>
+
+            <Space
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight=".1"
+                 />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight=".1"
+            tools:ignore="NestedWeights" /><!--needed for a proper layout-->
+
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.9">
+
+                <Button
+                    android:id="@+id/GuestButton"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:background="@mipmap/bannerwelcomescreenflipped"
+                    android:onClick="StartQRCodeReaderActivity"
+
+                    android:paddingEnd="0dp"
+                    android:paddingStart="65dp"
+                    android:text="@string/guest"
+                    android:textAlignment="textStart"
+                    android:textColor="@color/textColorMain"
+                    android:textSize="28sp"
+                    android:textStyle="bold"
+                    android:theme="@style/mainTheme"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintDimensionRatio="H,6:1"
+                    app:layout_constraintEnd_toEndOf="parent"
+
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:layout_editor_absoluteX="196dp"
+                    app:layout_constraintVertical_bias="0.494" />
+
+            </android.support.constraint.ConstraintLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.9"
+            tools:ignore="NestedWeights"><!--needed for a proper layout-->
+
+
+                    <Button
+                        android:id="@+id/MemoriesButton"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+
+                        android:background="@mipmap/bannerwelcomescreen"
+
+                        android:onClick="startMemoriesActivity"
+                        android:paddingEnd="65dp"
+                        android:paddingStart="0dp"
+                        android:text="@string/memories"
+                        android:textAlignment="textEnd"
+                        android:textColor="@color/textColorMain"
+                        android:textSize="28sp"
+                        android:textStyle="bold"
+                        android:theme="@style/mainTheme"
+
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintDimensionRatio="H,6:1"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:layout_editor_absoluteX="0dp" />
+                </android.support.constraint.ConstraintLayout>
+
+                <Space
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight=".1" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight=".3"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textPowered"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="@string/powered_app"
+                    android:textColor="@color/textColorMain"
+                    tools:ignore="NestedWeights" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/loadingBar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/backgroundSeethrough"
+        android:visibility="invisible">
+
+        <ProgressBar
+            android:id="@+id/loading"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true" />
+
+        <TextView
+            android:id="@+id/Reconnecting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/loading"
+            android:layout_centerHorizontal="true"
+            android:paddingTop="24dp"
+            android:text="@string/Reconnecting"
+            android:textColor="@color/colorPrimary"
+            android:textSize="24sp" />
+    </RelativeLayout>
+</RelativeLayout>

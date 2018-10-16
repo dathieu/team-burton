@@ -1,0 +1,150 @@
+apply plugin: 'com.android.application'
+apply plugin: 'jacoco-everywhere'
+
+android {
+
+    compileSdkVersion 25
+    buildToolsVersion "26.0.2"
+    defaultConfig {
+        applicationId "ch.epfl.sweng.partyup"
+        minSdkVersion 23
+        // target sdk was given, known as not the latest
+        //noinspection OldTargetApi
+        targetSdkVersion 25
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        vectorDrawables.useSupportLibrary = true
+    }
+    buildTypes {
+        debug {
+            testCoverageEnabled = true
+        }
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    lintOptions {
+        abortOnError false
+    }
+
+
+}
+
+//TODO: this should be in build.gradle
+repositories {
+    mavenCentral()
+    flatDir {
+        dirs 'libs'
+    }
+}
+
+// automatically grant permission to use camera in WelcomeScreenTest
+repositories {
+    maven { url "https://jitpack.io" }
+}
+
+// TODO: adding firebase ui support will cause problems in the resolved app version,
+// see: https://github.com/firebase/FirebaseUI-Android/issues/239
+configurations.all {
+    resolutionStrategy.force 'com.android.support:support-annotations:25.3.1'
+    resolutionStrategy.force 'com.android.support:support-v4:25.3.1'
+    resolutionStrategy.force 'com.android.support:support-fragment:25.3.1'
+    resolutionStrategy.force 'com.android.support:support-compat:25.3.1'
+    resolutionStrategy.force 'com.android.support:support-media-compat:25.3.1'
+    resolutionStrategy.force 'com.android.support:design:25.3.1'
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+
+    compile project(':spotify-android-auth-1.0.0')
+    compile 'com.spotify.sdk:spotify-player-24-noconnect-2.20b@aar'
+
+    //used to generate QR code
+
+
+    // firebase dependencies
+    // compile 'com.firebaseui:firebase-ui-auth:2.4.0'
+
+    //for network connection
+
+    // test dependencies
+    androidTestCompile('com.android.support.test.espresso:espresso-contrib:2.2.2') {
+        exclude group: 'com.android.support', module: 'appcompat'
+        exclude group: 'com.android.support', module: 'support-v4'
+        exclude module: 'recyclerview-v7'
+    }
+
+
+    // firebase dependencies
+
+    //utomatically grant permission to use camera in WelcomeScreenTest
+
+    compile 'com.github.bumptech.glide:glide:3.7.0'
+
+    compile 'com.firebaseui:firebase-ui-storage:0.6.0'
+
+
+    //used to generate QR code
+
+
+    // firebase dependencies
+    // compile 'com.firebaseui:firebase-ui-auth:2.4.0'
+
+    //for network connection
+
+    // test dependencies
+    androidTestCompile('com.android.support.test.espresso:espresso-contrib:2.2.2') {
+        exclude group: 'com.android.support', module: 'appcompat'
+        exclude group: 'com.android.support', module: 'support-v4'
+        exclude module: 'recyclerview-v7'
+    }
+
+
+    // firebase dependencies
+
+    //utomatically grant permission to use camera in WelcomeScreenTest
+
+    compile 'com.android.support:appcompat-v7:25.3.1'
+    compile 'com.android.support:palette-v7:25.3.1'
+    compile 'com.android.support.constraint:constraint-layout:1.0.2'
+    compile 'com.google.android.gms:play-services-vision:11.2.0'
+    compile 'com.android.support:design:25.3.1'
+    compile 'com.android.support:support-vector-drawable:25.3.1'
+    compile 'com.android.support:support-v4:25.3.1'
+    compile 'com.google.zxing:core:3.2.1'
+    compile 'com.google.firebase:firebase-core:11.2.0'
+    compile 'com.google.firebase:firebase-database:11.2.0'
+    compile 'com.google.firebase:firebase-auth:11.2.0'
+    compile 'com.google.firebase:firebase-storage:11.2.0'
+    compile 'com.android.volley:volley:1.0.0'
+    testCompile 'junit:junit:4.12'
+    testCompile 'com.google.firebase:firebase-core:11.2.0'
+    testCompile 'com.google.firebase:firebase-database:11.2.0'
+    testCompile 'com.google.firebase:firebase-auth:11.2.0'
+    testCompile 'org.mockito:mockito-android:2.11.0'
+    androidTestCompile 'com.android.support:support-annotations:25.3.1'
+    androidTestCompile 'com.android.support.test:runner:1.0.1'
+    androidTestCompile 'com.android.support.test:rules:1.0.1'
+    androidTestCompile 'com.android.support.test.espresso:espresso-core:3.0.1'
+    androidTestCompile 'com.android.support.test.espresso:espresso-intents:3.0.1'
+    androidTestCompile 'com.android.support:appcompat-v7:25.3.1'
+    androidTestCompile 'com.android.support.constraint:constraint-layout:1.0.2'
+    androidTestCompile 'org.mockito:mockito-android:2.11.0'
+    //it work with this version 1 week is not enough to insure the change won't break
+    //noinspection GradleDependency
+    androidTestCompile 'com.android.support.test.uiautomator:uiautomator-v18:2.1.1'
+    androidTestCompile 'com.google.firebase:firebase-core:11.2.0'
+    androidTestCompile 'com.google.firebase:firebase-database:11.2.0'
+    androidTestCompile 'com.google.firebase:firebase-auth:11.2.0'
+    androidTestCompile 'com.github.jksiezni.permissive:permissive-testing:0.2'
+}
+
+// google services for firebase
+apply plugin: 'com.google.gms.google-services'
+

@@ -1,0 +1,57 @@
+<resources>
+    <string name="app_name">PartyUp</string>
+    <string name="qr_text_default">decoded qr</string>
+    <string name="qr_text_no_perm">permission to use the camera not granted</string>
+    <string name="title_activity_host">HostActivity</string>
+    <string name="title_activity_qrcode_reader">QRCodeReaderActivity</string>
+    <string name="title_playlist">Playlist</string>
+    <string name="title_qrcode">QR Code</string>
+    <string name="desc_qr_code">display qrcode to be scanned</string>
+    <string name="guest">Join a Party</string>
+    <string name="host">Host a Party</string>
+    <string name="memories">Relive a Party</string>
+    <string name="title_activity_guest">GuestActivity</string>
+    <string name="party_name">My Party !</string>
+
+    <string name="no_photo_taken">No photos were taken</string>
+
+    <string name="memory_navigation_songs">Songs</string>
+    <string name="memory_navigation_photos">Photos</string>
+
+    <string name="scan_instruction">Scan the party QR code:</string>
+
+    <string name="album">Album Image</string>
+    <string name="textview">TextView</string>
+    <string name="noResult">No results, sorry…</string>
+
+    <string name="set_name">Set Name</string>
+    <string name="end_party">End Party</string>
+    <string name="leave_party">Leave Party</string>
+    <string name="cancel">Cancel</string>
+    <string name="albumImagefail">Album Image not found</string>
+    <string name="imageButton">button image not found</string>
+    <string name="WelcomeScreenTitle">Party Up!</string>
+
+    <string name="searchHint">Search songs</string>
+
+    <string name="thumbnailGalleryDescription">Thumbnail to show party images</string>
+    <string name="added_to_spotify">Added to your Spotify Library</string>
+    <string name="errorMessage">An error has occurred</string>
+    <string name="errorUploadPhoto">Could not upload photo</string>
+    <string name="errorDownloadMetadata">Could not download information</string>
+
+    <string name="data_save_filename">Data_connection</string>
+    <string name="key_pref_connected_party">Still_connected_party</string>
+    <string name="key_pref_is_host">Is_host_of_party</string>
+
+    <string name="Reconnecting">Reconnecting to party…</string>
+
+    <string name="photo_loading_failed">Photo Loading Failed</string>
+
+    <string name="confirm_end_party">Are you sure?</string>
+    <string name="lbl_count_text">%1$d of %2$d</string>
+
+    <string name="powered_app">Spotify-powered app</string>
+
+    <string name="playlist_added">Playlist added</string>
+</resources>
